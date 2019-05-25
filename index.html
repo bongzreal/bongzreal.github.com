@@ -375,7 +375,7 @@
     $(document).ready(function() {
       var dcconListUrl = getUrlParameter('dccon_list');
       if (dcconListUrl == undefined) {
-        dcconListUrl = 'http://bongzreal.github.io/dccon.json';
+        dcconListUrl = 'https://gist.githubusercontent.com/bongzreal/1559bd475d5ef30498d5a65334675b69/raw/c7a68116c757d20a3e0b0d3005a89cdbc9459d84/dccon_list.json';
       }
       $.getJSON(dcconListUrl).done(function(data) {
           dcconList = data.dccons;
