@@ -1,4 +1,5 @@
 {
+
 "레바그안키" : "https://bongzreal.github.io/레바콘/레바그안키.png",
 "레바꺄륵" : "https://bongzreal.github.io/레바콘/레바꺄륵.png",
 "레바띠용" : "https://bongzreal.github.io/레바콘/레바띠용.png",
@@ -31,6 +32,5 @@
 "펄럭2" : "https://bongzreal.github.io/펄럭콘/펄럭2.gif",
 "펄럭3" : "https://bongzreal.github.io/펄럭콘/펄럭3.png",
 "펄럭4" : "https://bongzreal.github.io/펄럭콘/펄럭4.png",
-
 
 }
