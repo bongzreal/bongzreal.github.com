@@ -19,7 +19,7 @@
 "레바한참부족" : "https://bongzreal.github.io/레바콘/레바한참부족.png",
 "레바핥짝" : "https://bongzreal.github.io/레바콘/레바핥짝.png",
 
-"우리핵드럼" : "https://bongzreal.github.io/우리핵콘/우리핵드럼.png",
+"우리핵드럼" : "https://bongzreal.github.io/우리핵콘/우리핵드럼.gif",
 "우리핵박수" : "https://bongzreal.github.io/우리핵콘/우리핵박수.gif",
 "우리핵박수2" : "https://bongzreal.github.io/우리핵콘/우리핵박수2.gif",
 "우리핵박수3" : "https://bongzreal.github.io/우리핵콘/우리핵박수3.gif",
