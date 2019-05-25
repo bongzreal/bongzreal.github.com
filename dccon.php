@@ -26,10 +26,11 @@
 "우리핵아닌데" : "https://bongzreal.github.io/우리핵콘/우리핵아닌데.gif",
 "우리핵안녕" : "https://bongzreal.github.io/우리핵콘/우리핵안녕.gif",
 "우리핵투정" : "https://bongzreal.github.io/우리핵콘/우리핵투정.gif",
-"무궁화" : "https://bongzreal.github.io/펄럭콘/무궁화.gif",
-"펄럭1" : "https://bongzreal.github.io/펄럭콘/펄럭1.png",
-"펄럭2" : "https://bongzreal.github.io/펄럭콘/펄럭2.png",
+"무궁화" : "https://bongzreal.github.io/펄럭콘/무궁화.png",
+"펄럭1" : "https://bongzreal.github.io/펄럭콘/펄럭1.gif",
+"펄럭2" : "https://bongzreal.github.io/펄럭콘/펄럭2.gif",
 "펄럭3" : "https://bongzreal.github.io/펄럭콘/펄럭3.png",
 "펄럭4" : "https://bongzreal.github.io/펄럭콘/펄럭4.png",
+
 
 }
