@@ -1,5 +1,4 @@
 {
-
 "레바그안키" : "https://bongzreal.github.io/레바콘/레바그안키.png",
 "레바꺄륵" : "https://bongzreal.github.io/레바콘/레바꺄륵.png",
 "레바띠용" : "https://bongzreal.github.io/레바콘/레바띠용.png",
@@ -18,7 +17,6 @@
 "레바팝콘2" : "https://bongzreal.github.io/레바콘/레바팝콘2.png",
 "레바한참부족" : "https://bongzreal.github.io/레바콘/레바한참부족.png",
 "레바핥짝" : "https://bongzreal.github.io/레바콘/레바핥짝.png",
-
 "우리핵드럼" : "https://bongzreal.github.io/우리핵콘/우리핵드럼.gif",
 "우리핵박수" : "https://bongzreal.github.io/우리핵콘/우리핵박수.gif",
 "우리핵박수2" : "https://bongzreal.github.io/우리핵콘/우리핵박수2.gif",
@@ -28,5 +26,10 @@
 "우리핵아닌데" : "https://bongzreal.github.io/우리핵콘/우리핵아닌데.gif",
 "우리핵안녕" : "https://bongzreal.github.io/우리핵콘/우리핵안녕.gif",
 "우리핵투정" : "https://bongzreal.github.io/우리핵콘/우리핵투정.gif",
+"무궁화" : "https://bongzreal.github.io/펄럭콘/무궁화.gif",
+"펄럭1" : "https://bongzreal.github.io/펄럭콘/펄럭1.png",
+"펄럭2" : "https://bongzreal.github.io/펄럭콘/펄럭2.png",
+"펄럭3" : "https://bongzreal.github.io/펄럭콘/펄럭3.png",
+"펄럭4" : "https://bongzreal.github.io/펄럭콘/펄럭4.png",
 
 }
