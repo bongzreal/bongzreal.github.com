@@ -27,6 +27,6 @@
 "우리핵쌍안경" : "https://bongzreal.github.io/우리핵콘/우리핵쌍안경.gif",
 "우리핵아닌데" : "https://bongzreal.github.io/우리핵콘/우리핵아닌데.gif",
 "우리핵안녕" : "https://bongzreal.github.io/우리핵콘/우리핵안녕.gif",
-"우리핵투정" : "https://bongzreal.github.io/우리핵콘/우리핵투정.gif"
+"우리핵투정" : "https://bongzreal.github.io/우리핵콘/우리핵투정.gif",
 
 }
