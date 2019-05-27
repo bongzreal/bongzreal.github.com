@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0" />
+  <title>짤방콘 선택기</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    body{
+      background-color: #333;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    @media screen and (max-width: 600px) {
+      div.img {
+        margin: 0.9%;
+        border: 1px solid rgba(255,255,255,0);
+        float: left;
+        width: 18%;
+        backface-visibility: visible !important;
+        animation: bounceIn 1.2s;
+        transition: .2s;
+        z-index: 1;
+      }
+    }
+    @media screen and (min-width: 601px) {
+      div.img {
+        margin: 5px;
+        border: 1px solid rgba(255,255,255,0);
+        float: left;
+        width: 100px;
+        height: 100px;
+        backface-visibility: visible !important;
+        animation: bounceIn 1.2s;
+        transition: .2s;
+        z-index: 1;
+      }
+    }
+    div.img:hover {
+      border: 1px solid #fff;
+      box-shadow: 0px 0px 25px 1px #fff, inset 0px 0px 25px 1px #fff; 
+    }
+    @keyframes bounceIn {
+      from, 20%, 40%, 60%, 80%, to {z-index: -5; animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);}
+      0% {transform: scale3d(.3, .3, .3); opacity: 0;}
+      20% {transform: scale3d(1.1, 1.1, 1.1);}
+      40% {transform: scale3d(.9, .9, .9);}
+      60% {transform: scale3d(1.03, 1.03, 1.03); opacity: .9; }
+      80% {transform: scale3d(.97, .97, .97);}
+      to {transform: scale3d(1, 1, 1); opacity: 1;}
+    }
+    div.img img {
+      width: 100%;
+      height: auto;
+    }
+/*    div.img img:hover{
+      box-shadow: inset 0px 0px 25px 1px #fff; 
+    }*/
+    div.desc {
+      display: none;
+    }
+    input,.input-group {
+      width: 100%;
+    }
+    div.headerBox{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 55px;
+      background-color:#333;
+      background-repeat: repeat;
+      box-shadow: 0 0px 20px 20px #333;
+    }
+    div.header {
+      padding: 0px 0px 0px 3px;
+      max-width: 400px;
+      margin: 18px auto;
+      background-color: #333;
+    }
+    .emoticon {
+      margin-top: 75px;
+      margin-bottom: 20px;
+      margin-left: 10px;
+      height: auto;
+      z-index: 999;
+    }
+    .input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group{
+      width: 63px;
+    }
+    .col-lg-6l, .col-lg-6r{
+      width: 50%;
+      padding: 5px;
+      float: left;
+      animation: slideInLeft 1s;
+    }
+    .col-lg-6r{
+      animation: slideInRight 1s;
+    }
+    @keyframes slideInLeft {
+      from {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+        opacity: 0;
+      }
+      to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+      }
+    }
+    @keyframes slideInRight {
+      from {
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        opacity: 0;
+      }
+      to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+      }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/handlebarsjs/4.0.5/handlebars.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.quicksearch/2.3.1/jquery.quicksearch.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.1/clipboard.min.js"></script>
+</head>
+<body>
+  <script id="dccon-template" type="text/x-handlebars-template">
+  {{#dccon}}
+  <div class="img">
+    <a href="#" onclick="inputDCCon('~{{name}}');return false;">
+      <img class="lazy" data-original="{{src}}" alt="{{name}}" width="100" height="100">
+    </a>
+    <div class="desc">{{name}}</div>
+  </div>
+  {{/dccon}}
+  </script>
+
+<!--   <div class="img">
+    <a href="#" onmouseover="inputDCCon('~{{name}}');return false;">
+      <img class="lazy" data-original="{{src}}" alt="{{name}}" width="100" height="100">
+    </a>
+    <div class="desc">{{name}}</div>
+  </div> -->
+
+  
+  <div class="headerBox">
+    <div class="row header">
+      <div class="col-lg-6l">
+        <div class="input-group">
+          <input type="text" id="dcconsearch" class="form-control dcconsearch" placeholder="검색">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button" onclick="resetSearch();">전체</button>
+          </span>
+        </div>
+      </div>
+      <div class="col-lg-6r">
+        <div class="input-group">
+          <input type="text" id="dcconresult" class="form-control dcconresult" placeholder="선택">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button" data-clipboard-target="#dcconresult">복사</button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="emoticon" class="emoticon">
+  </div>
+  <script>
+    var dcconimage = {};
+    var data = {
+      dccon: []
+    };
+    // 디시콘 불러오기 초기화 함수
+    function initChatInject() {
+      // httpRequest 초기화
+      if (window.XMLHttpRequest) { // 파폭, 사파리, 크롬 등등 웹표준 준수 브라우저
+        httpRequest = new XMLHttpRequest();
+      } else if (window.ActiveXObject) { // 쓰레기 IE
+        try {
+          httpRequest = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch (e) {
+          try {
+            httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+          } catch (e) {}
+        }
+      }
+      if (!httpRequest) {
+        alert('ERROR : Cannot init XMLHTTPRequest');
+        return false;
+      }
+      httpRequest.onreadystatechange = LoadDCCon;
+      httpRequest.open('GET', "https://gist.githubusercontent.com/bongzreal/73de134a70fc7254f130721c1d9c273c/raw/542a8d3bbb47db84d4d7c9f437f6d74ba8786f3e/cutshieldcon_list.json");
+      httpRequest.send();
+    }
+    // 디시콘 불러오기 완료 함수
+    function LoadDCCon() {
+      if (httpRequest.readyState === 4) {
+        if (httpRequest.status === 200) {
+          try {
+            dcconimage = JSON.parse(httpRequest.responseText);
+            $.each(dcconimage, function(index, value) {
+              data.dccon.push({
+                name: index,
+                src: value
+              });
+            });
+            var source = $("#dccon-template").html();
+            var template = Handlebars.compile(source);
+            var html = template(data);
+            $('#emoticon').html(html);
+            var qs = $('input#dcconsearch').quicksearch('div#emoticon div.img', {
+              'delay': 100,
+              'selector': 'div.desc',
+              'onAfter': function () {
+                $('body').scroll();
+              }
+            });
+            $("img.lazy").lazyload();
+            new Clipboard('.btn');
+          } catch (e) {
+            alert("Unknown error occured while parsing DCCon JSON.");
+          }
+        } else {
+          alert("Unknown error occured while downloading DCCon JSON.");
+        }
+      }
+    }
+    function inputDCCon(name) {
+      $('#dcconresult').val(name);
+    }
+    function resetSearch() {
+      $('#dcconsearch').val('');
+      $('#dcconsearch').trigger("keyup");
+    }
+    
+    window.onload = function () {
+      initChatInject();
+    }
+  </script>
+</body>
+</html>
